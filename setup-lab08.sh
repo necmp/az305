@@ -2,7 +2,7 @@
 
 # 開始メッセージ
 echo;
-printf "\e[33;1m----- NECMP AZ305 Training / Lab02 Setup -----\e[m"
+printf "\e[33;1m----- NECMP AZ305 Training / Lab08 Setup -----\e[m"
 echo;
 echo;
 echo -n "あなたの <受講者番号> を入力してください = "
@@ -46,14 +46,6 @@ az vm create \
     --vnet-name VNet$num \
     --subnet Frontend \
     --public-ip-sku Standard \
-    --output table
-
-#HTTP インバウンドアクセスの許可
-echo "HTTP インバウンドアクセスを許可します..."
-az vm open-port \
-    --resource-group RG$num \
-    --name VM$num \
-    --port 80 \
     --output table
 
 # 終了メッセージ
